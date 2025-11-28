@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giới thiệu bản thân - Nguyễn Nam Lập</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif; 
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+      color: #333;             
+
+    }
+    header {
+      background: #1dcafa;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+    section {
+        padding: 30px;
+        max-width: 900px;
+        margin: 8px auto;
+        background: white;
+        border-radius: 16px;
+
+      /* bóng đổ đẹp hơn */
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+      /* hiệu ứng mượt khi hover */
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* tiêu đề section */
+section h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #374151;
+  border-left: 5px solid #6366f1;
+  padding-left: 10px;
+}
+
+  /* danh sách skill */
+  .skills ul {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+
+    /* tạo layout 2 cột auto đẹp */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* khoảng cách giữa các box */
+    gap: 50px;
+    justify-items: center;
+  }
+
+  .skills li {
+    background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-weight: 500;
+    color: #374151;
+    width: 100%;           /* để các box bằng nhau */
+    max-width: 350px;      /* không quá dài */
+    text-align: center;
+
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+
+  .skills li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+  }
+
+
+  .skills1 ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .skills1 li {
+    padding: 6px 0;
+    margin-bottom: 4px;
+    font-weight: 500;
+    color: #0f3d6e;
+    text-align: left;
+
+    /* thêm hiệu ứng tinh tế */
+    position: relative;
+  }
+
+  .skills1 li::before {
+    content: "•";
+    color: #0f3d6e;
+    font-weight: bold;
+    margin-right: 8px;
+    position: absolute;
+    left: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+      color: #525252;
+    }
+  </style>
+
+</head>
+<body>
+  <header>
+    <h1>Hello, I am Nguyễn Nam Lập 👋</h1>
+    <p>INTERN DATA ENGINEER/ANALYST</p>
+  </header>
+
+  <section>
+    <h2>📌 OBJECTIVE</h2>
+    <p>Data Engineer student seeking an internship to contribute to building and automating ETL and streaming pipelines. Eager to apply analytical and data-driven skills to deliver clean, production-ready data while learning cloud-native best practices on AWS.</p>
+  </section>
+
+  <section class="skills">
+    <h2>⚙️ TECHNICAL SKILLS</h2>
+    <ul>
+      <li>Programming: Python, SQL, Java (basic) </li>
+      <li>Data processing: Apache Kafka, Pyspark (Apache Spark), Apache Airflow</li>
+      <li>Database: PostgreSQL, Cassandra</li>
+      <li>Libraries: NumPy, Pandas, Matplotlib, Seaborn</li>
+      <li>Cloud & DevOps: AWS (learning) , Docker, Linux , Git, Kubernetes (basic)</li>
+      <li>Microsoft service: Power Bi(learning), Excel(basic) </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🚀 Projects</h2>
+    <p><b>🔥 COVID-19 Data Analysis</b><br>
+      <br>
+    Source: Our World in Data (OWID)<br>
+    Tools: Python, Pandas, Matplotlib, Seaborn<br>
+    Description: Collected and analyzed global COVID-19 data to visualize infection and death trends for Vietnam, the US, and India between 2020–2022.<br>
+    Key tasks:<br>
+  •	Cleaned and filtered datasets using Pandas.<br>
+  •	Created time-series visualizations for new cases and deaths using Seaborn.<br>
+  •	Gained insights into pandemic trends and vaccination progress<br>
+</p>
+  </section>
+  <section>
+    <p><b>🔥 Real-Time Stock Data Streaming Pipeline </b><br>
+    <br>
+    Source: CafeF.vn (financial & stock market data)<br>
+    Tools: Python, Java, Apache Kafka, Pyspark, Cassandra, PostgreSQL, Airflow, Docker<br>
+    Description: Built a real-time streaming data pipeline to collect, process, and store live stock market data. The system integrates Kafka for message streaming, Spark for distributed processing, Cassandra for scalable storage, and Airflow for orchestration.<br>
+    Key tasks:<br>
+    •	Extract: Used Request and pandas (Python) to crawl and publish real-time stock data into csv, Kafka topics.<br>
+    •	Transform (Streaming): Consumed Kafka streams with Spark Structured Streaming, cleaned and transformed records in real time.<br>
+    •	Load: Stored processed data into Apache Cassandra and PostgreSQL<br>
+    •	Orchestration: Automated and monitored ETL jobs using Airflow DAGs deployed in Docker containers.<br>
+    •	Result: Enabled low-latency analysis of live stock data, supporting real-time dashboard updates.<br>
+    <p>
+  </section>
+  <section>
+    <p><b>🔥 Stock Price Prediction – Data Pipeline (Team project)</b><br>
+      <br>
+      Source: Simplize.vn (live stock market data)<br>
+      Tools: Python, Selenium, FastAPI, Apache Kafka, PostgreSQL, Kubernetes, Scikit-learn (teammate), React/Next.js (teammate)<br>
+      Description: Worked in a 3-member team to build a complete real-time stock prediction system, including data collection, streaming, processing, storage, machine learning modeling, and a frontend interface for end users.<br>
+      My key tasks (Data Engineering role):<br>
+      •	Automated data extraction from Simplize.vn using Selenium and exposed it through a FastAPI service.<br>
+      •	Streamed real-time stock data into Kafka topics for scalable ingestion and processing.<br>
+      •	Loaded processed and validated data into PostgreSQL for querying and dashboarding.<br>
+      •	Containerized all components with Docker and deployed the full pipeline on Kubernetes using Deployment, StatefulSet, ConfigMap, and PVC for high availability and reliability.<br>
+</p>
+  </section>
+<section>
+  <h2>🏫 EDUCATION</h2>
+  <ul>
+    <li>Ho Chi Minh University of Banking (HUB) </li>
+    <li><b>Time:</b> : 09/2024 – Present</li>
+    <li><b>Major:</b> Data science </li>
+  </ul>
+</section>
+<section>
+  <h2>✉️ CERTIFICATES</h2>
+  <ul>
+    <li><b>HackerRank:</b> SQL (Advanced)</li>
+    <li><b>IELTS 5.5:</b> Listening 5.5, Reading 6.5, Writing 6.0, Speaking 4.5</li>
+  </ul>
+</section>
+
+<section>
+  <h2>📍 ADDITIONAL</h2>
+  <ul>
+    <li><b>Soft Skills: </b>Problem-solving, Teamwork, Communication, Time Management, Adaptability, Business Awareness</li>
+    <li><b>Languages: </b> English, Vietnamese (Native)</li>
+  </ul>
+</section>
+
+  <section class="skills1">
+    <h2>📫 Contact</h2>
+    <ul>
+    <li><b>Email:</b> nguyennamlap384@gmail.com<br></li>
+      <li> <b>GitHub:</b> <a href="#">github.com/nguyennamlap</a></p></li>
+       <li><b>Phone number:</b> 0769746645 <br></li>
+       <li><b>Address:</b> Dĩ An, Bình Dương, Việt Nam <br></li>
+       </ul>
+  </section>
+
+  <footer>
+    © 2025 - Nguyễn Nam Lập 
+  </footer>
+</body>
+</html>
